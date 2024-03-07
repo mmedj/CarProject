@@ -89,8 +89,10 @@ public class CarMotion : MonoBehaviour
             if(nitroActive)
             {
                 scoreManager.score=50;
+                nitroActive = false;
 
-            }else
+            }
+            else
             {
                 scoreManager.DecreaseScore(10);
 

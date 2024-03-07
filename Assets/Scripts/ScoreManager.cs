@@ -12,26 +12,27 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         if (score > 50)
-        { 
-            car.nitro = 0.7f; 
+        {
+            car.nitro = 0.7f;
         }
         else
         {
-            car.nitro=0.3f;
+            car.nitro = 0.3f;
         }
 
 
     }
     public void IncreaseScore(int amount)
     {
-        score += amount/2;
+        score += amount / 2;
         UpdateScoreText();
     }
 
     public void DecreaseScore(int amount)
     {
-        if(score-amount/2>0){
-            score -= amount/2;
+        if (score - amount / 2 > 0)
+        {
+            score -= amount / 2;
         }
         UpdateScoreText();
     }
@@ -39,5 +40,9 @@ public class ScoreManager : MonoBehaviour
     private void UpdateScoreText()
     {
         scoreText.text = "Score: " + score;
+        if (score > 50)
+        {
+            scoreText.text = "Score: " + score + "(Nitro Eligible)";
+        }
     }
 }

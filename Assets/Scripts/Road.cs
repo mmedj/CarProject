@@ -5,7 +5,7 @@ using UnityEngine;
 public class Road : MonoBehaviour
 {
     public GameObject roadPrefab;
-    public float roadLength = 300f;
+    public float roadLength = 700f;
     public GameObject box;
     public GameObject coin;
     public Transform car;
